@@ -1,0 +1,198 @@
+body{
+    height: 100vh;
+    width: 100%;
+    margin:0;
+    padding:0;
+    
+
+}
+.g_topbanner{
+    margin-top: 0px;
+     height: 35px;
+    background-image:url("/top_nav_banner.png");
+    background-size:65%;
+    background-repeat: no-repeat;
+    background-color: #ff91bb;
+    
+    width: 100%;
+    display: flex;
+    justify-content:center ;
+    justify-content: space-between;
+}
+#beauty_bonanza{
+  margin-left:10% ;  
+ margin-top:9px;
+ animation: slide 3s infinite;
+ font-family: 'Inter', sans-serif;
+ font-size: 16px;
+}
+#beauty_bonanza:hover{
+    cursor: pointer;
+    color: red;
+}
+
+@keyframes slide{
+ 0%{transform: translateY(10px);opacity: 1;}   
+5%,50%{transform: translateY(0);opacity: 1;}
+51%{transform: translateY(-10px);opacity: 0;}
+52%,100%{transform: translateY(10px);opacity: 0;}
+}
+
+.navbar_icons{
+    width:40%;
+    display: flex;
+    margin-left: 100px;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 35px;
+}
+.material-symbols-outlined{
+    margin-top: 5px;
+}
+.navbar_icons>p{
+margin-top: 7px;
+font-weight: 400;
+font-family: 'Inter', sans-serif;
+font-size: 14px;
+}
+.navbar_icons>p:hover{
+    cursor: pointer;
+    color: red;
+}
+.navbar_icons>h1{
+    margin-top: -4px;
+    font-weight: 100;
+}
+.category{
+    display: flex;
+    /* grid-template-columns: repeat(6,2fr); */
+    width: 50%;
+    justify-content: space-evenly;
+    padding: 1%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+.search{
+    display: flex;
+    justify-content: space-evenly;
+    width:40%;
+    padding: 1%;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+}
+.topnav_category{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(202, 195, 195);
+    background-color: white;
+}
+.category>p:hover{
+    color: orangered;
+    font-weight: 600;
+    
+}
+#nykaa_search{
+    display: flex;
+   background-color:  #f4f4f4;
+    align-items: center;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    justify-content: space-evenly;
+}
+#nykaa_search>input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: #939393;
+}
+#shopping_bag{
+    padding: 5px;
+    margin-top: 1px;
+}
+#shopping_bag:hover{
+    cursor: pointer;
+}
+.search>p:hover{
+cursor: pointer;
+}
+
+.topnav_container{
+    position: sticky;
+    top: 0;
+}
+.dropdown_category{
+    display :flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+.dropdown_category>div{
+color: #8f8e9a;
+font-family: 'Inter', sans-serif;
+font-size: 14px;
+}
+.offers{
+    display: flex;
+}
+.dropdown_category>div:hover{
+    color: orangered;
+    font-weight: 600;
+    border-bottom: solid 2px orangered;
+}
+
+.makeup{
+    position: absolute;
+    height: 60%;
+    width:90%;
+    border: solid 1px black;
+    margin-left: 5%;
+    display: none;
+}
+#Makeup:hover .makeup{
+display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+    .g_topbanner{
+        height:100px;
+        justify-content: center;
+    }
+   
+}
+
+@media screen and (max-width: 480px) {
+    .g_topbanner{
+        height:150px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar_icons{
+        width: 300px;
+        margin-left: 50%;
+        translate: -50% 0%;
+        justify-content: center;
+    }
+
+  }
