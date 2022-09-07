@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN/REGISTER</title>
+    <link rel="stylesheet" href="css/sign.css">
+    <script src="./scripts/log.js" type="module"> </script>
+
+  </head>
+  <body>
+    <div class="s_register_number">
+      <div class="s_register_number_head">
+        <a href="signUp.html">×</a>
+        <span>LOGIN / REGISTER</span>
+    </div>
+    <hr class="s_register_number_line" />
+      <input onkeyup="checkC()"  type="text" name="" id="number" class="s_register_number_mobile" placeholder="Enter Email ID or Phone Number" />
+      <span id="s_register_number_required">REQUIERD</span>
+      <button  id="s_register_proceed">PROCEED</button>
+    </div>
+    
+    <div id="alertBox">
+      <p id="alert_title"></p>
+      <p id="alert_des"></p>
+      <button id="close_alert">close</button>
+  </div>
+  </body>
+</html>

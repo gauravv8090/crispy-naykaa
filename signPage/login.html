@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="css/sign.css">
+    <script src="./scripts/login.js" type="module"></script>
+    <style>
+        .s_register_number_mobile{
+            margin-top: 3%;
+        }
+        .s_p_first{
+            font-size: 16px;
+            width: 75%;
+            margin: 13% auto;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="s_register_number">
+      <div class="s_register_number_head">
+        <a href="log.html">×</a>
+        <span>LOGIN</span>
+    </div>
+      <input type="text" name="" id="number" class="s_register_number_mobile" placeholder="Enter Email ID or Phone Number" />
+      <div class="s_p_first">
+          <p >Welcome back Nykaa user,
+            Please enter the OTP sent on your phone</p>
+          <p >(Be sure to check your spam folder)</p>
+      </div>
+    <div class="s_otp_flex">
+        <div class="s_otp_flex2">
+            <label for="s_otp">OTP</label>
+            <input type="text" id="s_otp" maxlength="6" >
+            <p class="s_wrong_otp">Wrong Otp</p>
+        </div>
+       
+        <div>
+          <div id="countdown"></div>
+          <div id="resendOtp">RESEND OTP</div>
+        </div>
+    </div>
+    
+      <button id="s_register_proceed"> VERIFY</button>
+    </div>
+    <div id="alertBox">
+        <p id="alert_title"></p>
+        <p id="alert_des"></p>
+        <button id="close_alert">close</button>
+    </div>
+  </body>
+</html>
+<script>
+
+</script>
