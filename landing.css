@@ -138,7 +138,7 @@
    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
  }
  #G-PINK{
-   height: 800px;
+   /* height: 800px; */
    /* max-height: ; */
    background-color: #fff0f4;
    margin-top: 4%;
@@ -156,11 +156,7 @@
    grid-template-columns: repeat(5, 1fr);
    gap: 20px;
    margin-top: 2%;
- }
- #TRENDING>div{
-   border-radius: 5%;
-   height: 500px;
-   /* border: 2px solid red; */
+   padding-bottom: 2%;
  }
  #TRENDING> div img{
    width: 100%;
@@ -362,9 +358,15 @@
      font-size: small;
      max-height: min-content;
    }
-   #TRENDING{
-    grid-template-columns: repeat(2,1fr);
+   #featured> div>div h2, #featured> div>div h3 {
+    font-size: medium;
    }
+   #featured2> div>div h2, #featured2> div>div h3 {
+    font-size: medium;
+   }
+   /* #TRENDING{
+    grid-template-columns: repeat(2,1fr);
+   } */
  }
  @media screen and (min-width: 950px) and(max-width: 1600px){
    #h3tag, #h4tag{
