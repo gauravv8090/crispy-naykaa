@@ -129,13 +129,16 @@ body{
     }
     #z1{
         display:grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 3%;
     font-size: 10px;
 
     }
     .cz > div > img{
         height: 40px;
+    }
+    #cls1hide{
+        display: none;
     }
       }
       /* Small screens */
@@ -151,7 +154,7 @@ body{
           }
           #z1{
             display:grid;
-            grid-template-columns: repeat(5,1fr);
+            grid-template-columns: repeat(2,1fr);
             gap: 2%;
     font-size: 8px;
 
@@ -159,6 +162,9 @@ body{
         }
         .cz > div > img{
             height: 30px;
+        }
+        #cls1hide{
+            display: none;
         }
       }
 
