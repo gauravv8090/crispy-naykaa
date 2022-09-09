@@ -1,0 +1,120 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+#GK_PARENT{
+    width: 100%;
+    background-color: #f3f3f3;
+}
+#Div_container{
+    background-color: #f3f3f3;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 1px black; */
+}
+#Div_1{
+    background-color: white;
+    height: 60vh;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    /* border: solid 1px black; */
+    justify-content: center;
+    align-items: center;
+}
+#Div_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 25%;
+    /* border: solid 1px black; */
+}
+#Div_2 img{
+    height: 90%;
+    width: 90%;
+    /* border: solid 1px black; */
+}
+#Div_3{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 93%;
+    /* border: solid 1px black; */
+    padding: 1%;
+}
+#Div4_p1{
+    font-family: 'Inter', sans-serif;
+    font-size:18px;
+    color:black; 
+    font-weight: 600; 
+}
+#Div_5{
+display: flex;
+justify-content: space-between;
+    width: 35%;
+}
+#Div_7{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+    }
+#Div_8{
+        display: grid;
+        width: 100%;
+        /* grid-template-columns: (2,1fr); */
+        }
+.Div8_b1{
+    
+    width: 25%;
+    height: 200%;
+    background-color: #fc2779;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+#Div_9{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 2.5%;
+}
+#Div_10{
+    background-color: white;
+    border: solid 1px #f3f4f6;padding: 2%;
+}
+
+#Div10_input1{
+    border: none;
+    outline: none;
+    height: 100%;
+}
+#Div10_b1{
+    background-color: white;
+    border: none;
+    color: #fc2779;
+}
+#Div_11{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #f3f4f6;
+margin-bottom: 0px;
+
+}
+#Div_12{
+    margin-top: 30px;
+    background-color: white;
+    padding: 2%;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
