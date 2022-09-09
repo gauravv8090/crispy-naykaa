@@ -1,0 +1,10 @@
+
+        #main{
+            border:1px solid rgb(49, 47, 173);
+            width: 20%;
+            height: 200px;
+            margin: auto;
+            margin-top: 200px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
