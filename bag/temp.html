@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr =[1,1,2,3,4,5]
+    var nykaadata = [];
+    arr.map(ele =>{
+        const getdata = async () => {
+            let res = await fetch(`http://localhost:4000/products/${ele}`);
+            let data = await res.json();
+            console.log(data);
+            
+      nykaadata.push(data)
+      localStorage.setItem("nykaaProduct",JSON.stringify(nykaadata))
+    };
+    getdata();  
+    
+    })
+</script>
+<!-- JSON.parse(localStorage.getItem("nykaaProduct")) || -->
