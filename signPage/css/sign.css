@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f3f3f3;
+}
+/* for sign_1  -------------------------------------------------------------------*/
+.s_signIn_1{
+    width: 23%;
+    margin: 5% auto auto auto;
+    font-size: 18px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background-color: rgba(255, 255, 255, 0.863);
+    /* border: 1px solid  rgb(192, 187, 187); */
+}
+.s_cross a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+
+}
+.s_signIn_1 > div {
+    padding: 5px;
+}
+.s_signIn_1 > img{
+    height: 150px;
+    width: 100%;
+    margin: 20px 0;
+}
+.s_heading{
+    font-size: 35px;
+    margin: 10px 0;
+    
+}
+#s_sign_number{
+    /* border: 1px solid red; */
+    padding: 10px;
+    text-align: center;
+    margin: 15px 0;
+    background-color: #fc2779;
+    color: white;
+}
+#s_sign_google{
+    border: 1px solid rgb(172, 156, 156);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(83, 75, 75) ;
+    font-weight: bold;
+}
+#s_sign_google img{
+    height: 25px;
+}
+.s_last_des{
+    color:rgb(83, 75, 75) ;
+}
+
+/* for login_number second / third // forth page///----------------------------------------------------------------------- */
+.s_register_number {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  margin: 5% auto auto auto;
+  font-size: 18px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: rgba(255, 255, 255, 0.863);
+}
+.s_register_number_mobile {
+  padding: 3.5%;
+  font-size: 15px;
+  color: rgb(83, 75, 75);
+  text-align: center;
+  border: none;
+  background-color: #f3f3f3;
+}
+#s_register_proceed {
+  margin: 10% 0px 35% 0px;
+  padding: 4%;
+  font-size: 18px;
+  background-color: #fc2779;
+  color: white;
+  border: none;
+}
+#s_register_number_required{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 10px;
+  padding: 2px;
+  font-weight: 500;
+}
+.s_register_number_head {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid  rgb(214, 207, 207);
+}
+.s_register_number_head > span {
+  margin-left: 20%;
+  font-weight: bold;
+  color: rgb(61, 57, 57);
+}
+.s_register_number_head > a {
+  text-decoration: none;
+  font-size: 40px;
+  color: rgb(61, 57, 57);
+}
+.s_otp_flex{
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between ;
+  color: #fc2779;
+
+}
+.s_otp_flex input{
+  border: none;
+    border-bottom: 1px solid red;
+    outline: none;
+}
+.s_wrong_otp{
+  display: none;
+}
+.s_otp_flex2{
+  display: flex;
+  flex-direction: column;
+}
+.s_p_first{
+  text-align: center;
+  color:rgb(61, 57, 57) ;
+}
+.s_span_pink{
+  margin: 30px 0px;
+  font-size: 17px;
+  /* color: pink; */
+}
+.s_span_pink > span{
+  color: #fc2779;
+}
+.s_almost_inp{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.s_almost_inp >input{
+  padding: 10px;
+  margin: 8% 0;
+  border: none;
+  border-bottom: 1px solid  rgb(214, 207, 207);
+  outline: none;
+}
+
+/* for alert box-------------------------- */
+#alertBox{
+  height: 20%;
+  width: 30%;
+  padding: 1%;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 34%;
+  background-color: #f3f3f3;
+  display: none;
+  box-shadow: rgba(2, 26, 49, 0.56) 0px 22px 70px 4px;
+}
+#close_alert{
+  background-color: rgb(230, 64, 64);
+}

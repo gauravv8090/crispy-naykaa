@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTER</title>
+    <link rel="stylesheet" href="css/sign.css">
+    <script src="./scripts/register.js" type="module"></script>
+
+  </head>
+  <body>
+    <div class="s_register_number">
+      <div class="s_register_number_head">
+        <a href="log.html">×</a>
+        <span>REGISTER</span>
+    </div>
+    <p class="s_p_first">Welcome to Nykaa!</p>
+    <p class="s_span_pink">Register now and get <span >2000</span> <span>Reward Points!</span></p>
+      <input type="text" name="" id="number" class="s_register_number_mobile" placeholder="Enter Email ID or Phone Number" />
+      <p class="s_p_first">Please enter the OTP sent to verify your phone number</p>
+    <div class="s_otp_flex">
+        <div class="s_otp_flex2">
+            <label for="s_otp">OTP</label>
+            <input type="text" id="s_otp" maxlength="6" >
+            <p class="s_wrong_otp">Wrong Otp</p>
+        </div>
+       
+        <div>
+          <div id="countdown"></div>
+          <div id="resendOtp">RESEND OTP</div>
+        </div>
+    </div>
+    
+      <button id="s_register_proceed"> VERIFY</button>
+    </div>
+    <div id="alertBox">
+      <p id="alert_title"></p>
+      <p id="alert_des"></p>
+      <button id="close_alert">close</button>
+  </div>
+  </body>
+</html>
+<script>
+  document.getElementById("s_register_proceed").onclick = ()=>{
+    location.href = "signDatails.html"
+  }
+  
+</script>
