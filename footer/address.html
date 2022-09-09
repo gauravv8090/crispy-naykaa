@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/adress.css">
+  </head>
+ <body>
+    <div id="navbar">
+      <div id="vadi">
+        <div id="nav">
+          <div id="logo">
+            <img 
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK47iYyT-3X758RkOppaeJ6z-1UPe_ehVqq-ldzFiA_Rw3Cwv_vQY_vk0MtNo7DsZg_Eg&usqp=CAU"
+              alt=""/> 
+            </div>
+           
+       <div id="nav_container">
+            <div id="login">1-LOGIN</div>
+            <div onclick="window.location.href='address.html'" id="address">
+              2 - ADDRESS
+              <div id="addr"></div>
+            </div>
+            <div onclick="window.location.href='payment.html'" id="payment">
+              3-PAYMENT
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div id="main">
+      <div id="addressTable">
+        <div tabindex="1" onclick="window.location.href='address.html'" id="new1">
+           New Address
+        </div>
+        <div id="savedAddress" tabindex="1">
+          Saved Address <span id="counter"> 0</span>
+        </div>
+      </div>
+      <div id="addresShow">
+        <form action="">
+          <div>
+            <h3>New Address</h3>
+          </div>
+
+          <div>
+            <input id="country" type="text" value="" placeholder="" required />
+            <label for="country">Select Country</label>
+          </div>
+          <div>
+            <input id="name" type="text" placeholder="" required />
+            <label for="name_id">Name</label>
+          </div>
+          <div>
+            <input id="phone" type="text" placeholder="" required />
+            <label for="phone_id">phone number</label>
+          </div>
+          <div>
+            <input id="postal" type="text" placeholder="" required />
+            <label for="posatl_id">Postal Code</label>
+          </div>
+          <div>
+            <textarea
+              name=""
+              id="address"
+              cols="54"
+              rows="5"
+              placeholder="Address"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <input id="checkbox" type="checkbox" placeholder="" />
+            <span style="margin-left: 15px"
+              >Use this as my default Shipping Address</span
+            >
+          </div>
+          <div>
+            <input
+              onclick="window.location.href='payment.html'"
+              id="submit"
+              type="submit"
+              value="SHIP TO THIS ADDRESS"
+            />
+          </div>
+        </form>
+      </div>
+        <div id="right">
+        <div id="h3div"></div>
+
+        <div id="card0"></div>
+        <br />
+
+        <div id="total">
+          <div>
+            <div>SubTotal</div>
+            <div class="total"></div>
+          </div>
+          <div>
+            <div>ShippingCharge</div>
+            <div>free</div>
+          </div>
+          <div>
+            <div>Discount</div>
+            <div>0</div>
+          </div>
+          <div>
+            <div>Use Reward Points (2000)</div>
+            <div>Apply</div>
+          </div>
+          <div>
+            <div>Grand Total</div>
+            <div class="grandtotal"></div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let data = JSON.parse(localStorage.getItem("addressDetails")) || [];
+  let c = document.querySelector("#counter");
+  c.innerHTML = data.length;
+
+  let saved = document.querySelector("#savedAddress");
+  saved.addEventListener("click", () => {
+    console.log(data);
+    appendData(data);
+  });
+
+  function appendData(data) {
+    let parent = document.querySelector("#addresShow");
+    parent.innerHTML = "";
+    data.map((el, index) => {
+      let parent = document.querySelector("#addresShow");
+
+      let card = document.createElement("div");
+      card.id = "card";
+
+      let name = document.createElement("h3");
+      name.innerHTML = el.Name;
+      let del = document.createElement("button");
+      del.innerHTML = "Delete";
+      del.id = "btn";
+      del.addEventListener("click", (index) => {
+        let removed = data.splice(index, 1);
+        localStorage.setItem("addressDetails", JSON.stringify(data));
+        appendData(data);
+        c.innerHTML = data.length;
+        console.log(data);
+        count = data.length;
+        // console.log(removed)
+      });
+
+      let para = document.createElement("p");
+      para.innerHTML = el.Address;
+      let phone = document.createElement("h3");
+      phone.innerHTML = el.Phone;
+      let input = document.createElement("input");
+      input.type = "submit";
+      input.value = "SHIP TO THIS ADDRESS";
+      input.style.backgroundColor = "#003243";
+      input.style.color = "white";
+      input.style.padding = "0px";
+      input.addEventListener("click", () => {
+        console.log(index)
+        localStorage.setItem("INDEX",index)
+        window.location.href = "payment.html";
+      });
+
+      card.append(name, del, para, phone, input);
+      parent.append(card);
+    });
+  }
+
+  let country = document.getElementById("country").value;
+
+  let submitting = document.querySelector("form");
+  submitting.addEventListener("submit", (e) => {
+    c.innerHTML = data.length;
+    e.preventDefault();
+    let country = document.getElementById("country").value;
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let postal = document.getElementById("postal").value;
+    let address = document.querySelector("textarea").value;
+
+    let obj = {
+      Name: name,
+      Phone: phone,
+      Postal: postal,
+      Address: address,
+    };
+    data.push(obj);
+    c.innerHTML = data.length;
+    localStorage.setItem("addressDetails", JSON.stringify(data));
+  });
+  function myFunction() {
+    let right = document.querySelector("#right");
+    let bagdata = JSON.parse(localStorage.getItem("finalproduct"));
+    console.log("he", bagdata);
+    let counter = bagdata.length;
+    let h3 = document.createElement("h3");
+    h3.innerHTML = `<span>${counter}</span> Items In Your Bag`;
+    h3.style.color = "rgb(254,176,74)";
+    h3.style.paddingLeft = "8px";
+    document.querySelector("#h3div").append(h3);
+    bagdata.map((ele) => {
+      let { img_url, title, price } = ele;
+      let card2 = document.createElement("div");
+      card2.id = "card2";
+
+      let div1 = document.createElement("div");
+      div1.id = "div1";
+      let div2 = document.createElement("div");
+      div2.id = "div2";
+
+      let img = document.createElement("img");
+      img.id = "smallimg";
+      img.src = img_url;
+
+      let p = document.createElement("p");
+      p.innerHTML = title;
+      p.style.borderBottom = "1px solid rgb(223, 213, 213)";
+
+      let h4 = document.createElement("h4");
+      h4.innerHTML = `₹${price}`;
+
+      div1.append(img);
+      div2.append(p, h4);
+      card2.append(div1, div2);
+      document.querySelector("#card0").append(card2);
+    });
+  }
+
+  myFunction();
+
+  let bagdata = JSON.parse(localStorage.getItem("finalproduct"));
+  let total = document.querySelector("#total");
+  let counter = bagdata.length;
+  let h3 = document.createElement("h3");
+  h3.innerHTML = `<span>${counter}</span> Items In Your Bag`;
+  h3.style.color = "rgb(254,176,74)";
+  h3.style.paddingLeft = "8px";
+  var sum = 0;
+  for (var i = 0; i < bagdata.length; i++) {
+    let v = +bagdata[i].price;
+
+    sum = sum + v;
+  }
+
+  document.querySelector(".total").innerHTML = `₹${sum}`;
+  document.querySelector(".grandtotal").innerHTML = `₹${sum}`;
+</script>

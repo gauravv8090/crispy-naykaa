@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp page</title>
+    <link rel="stylesheet" href="./style/otp.css">
+</head>
+<body>
+    <div id="main">
+        
+        <h1>ENTER OTP :</h1>
+        <input type="number" id="enterotp" placeholder="Enter OTP ONLY 1234" value=""><br><br><br>
+        <input id="submit" type="submit">
+        <input value="Delete" type="reset">
+    
+    </div>
+</body>
+</html>
+<script>
+        document.querySelector("#submit").addEventListener("click",enterotp)
+        function enterotp(){
+        var value=document.querySelector("#enterotp").value;
+        if(value=="1234"){
+            alert("Payment Successfull !");
+            console.log(value);
+            window.location.href="sucess.html";
+
+        }
+
+        else{
+            alert("Please Check Your OTP");
+        }
+         console.log(otp);         
+        }
+</script>
