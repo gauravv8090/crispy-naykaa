@@ -18,6 +18,7 @@ showProduct();
 
 function append(data){
 let dis= document.getElementById("PRODUCT");
+let cards ="";
     data.map(el=>{
         let rating;
         if(el.rating>4){
@@ -27,7 +28,7 @@ let dis= document.getElementById("PRODUCT");
         }else{
             rating = '&#9733;&#9733;&#9733;&#9734;&#9734;'
         }
-        let cards= `<div class="card">
+        cards += `<div class="card">
         <h6 id="G-five">BEST SELLER</h6>
         <div id="G-img"> <img src="${el.image1}" alt="${el.id}">
         <h6 id="G-des">${el.card_title}</h6>
@@ -46,11 +47,16 @@ let dis= document.getElementById("PRODUCT");
                 </div>
                 </div>
     </div>`
-    dis.innerHTML+= cards
 })
-document.querySelector(".card").addEventListener("click", ()=>{
-    xxxyyy();
-})
+dis.innerHTML= cards 
+var calssSeparate= document.querySelectorAll(".card");
+console.log(calssSeparate);
+for(var i=0; i<calssSeparate.length; i++){
+    calssSeparate[i].addEventListener("click", ()=>{
+        xxxyyy();
+        console.log(calssSeparate[i], "inside fun");
+    })
+}
 }
 
 function xxxyyy(){
@@ -85,7 +91,7 @@ async function mySort(data){
         localStorage.setItem("sortArr", JSON.stringify(res2));
         append(res2);
     }else if(data==="Discount"){
-        var res= await fetch("http://localhost:4000/products?_sort=offer&_order=desc");
+        var res= await fetch("http://localhost:4000/products?_sort=offer&_order=desc"); 
         var res2= await res.json()
         console.log(res2);
         document.getElementById("PRODUCT").innerHTML=null;
@@ -118,38 +124,44 @@ document.getElementById("catF").addEventListener("click", function(){
 
 async function myFilter(data){
     console.log(data);
-    if(data==="Hair_Styling_Tools"){
-        var res= await fetch("http://localhost:4000/products?category=Hair_Styling_Tools");
+    var res= await fetch(`http://localhost:4000/products?category=${data}`);
         var res2= await res.json()
         console.log(res2);
         document.getElementById("PRODUCT").innerHTML=null;
         append(res2);
-    }
-    else if(data==="Shaving_Tools"){
-        var res= await fetch("http://localhost:4000/products?category=Shaving_Tools");
-        var res2= await res.json()
-        console.log(res2);
-        document.getElementById("PRODUCT").innerHTML=null;
-        append(res2);
-    }else if(data==="Face/Skin_Tools"){
-        var res= await fetch("http://localhost:4000/products?category=Face/Skin_Tools");
-        var res2= await res.json()
-        console.log(res2);
-        document.getElementById("PRODUCT").innerHTML=null;
-        append(res2);
-    }else if(data==="Hair_Removal_Tools"){
-        var res= await fetch("http://localhost:4000/products?category=Hair_Removal_Tools");
-        var res2= await res.json()
-        console.log(res2);
-        document.getElementById("PRODUCT").innerHTML=null;
-        append(res2);
-    }else if(data==="Massage_Tools"){
-        var res= await fetch("http://localhost:4000/products?category=Massage_Tools");
-        var res2= await res.json()
-        console.log(res2);
-        document.getElementById("PRODUCT").innerHTML=null;
-        append(res2);
-    }
+     
+    // if(data==="Hair_Styling_Tools"){
+    //     var res= await fetch("http://localhost:4000/products?category=Hair_Styling_Tools");
+    //     var res2= await res.json()
+    //     console.log(res2);
+    //     document.getElementById("PRODUCT").innerHTML=null;
+        // append(res2);
+    // }
+    // else if(data==="Shaving_Tools"){
+    //     var res= await fetch("http://localhost:4000/products?category=Shaving_Tools");
+    //     var res2= await res.json()
+    //     console.log(res2);
+    //     document.getElementById("PRODUCT").innerHTML=null;
+    //     append(res2);
+    // }else if(data==="Face/Skin_Tools"){
+    //     var res= await fetch("http://localhost:4000/products?category=Face/Skin_Tools");
+    //     var res2= await res.json()
+    //     console.log(res2);
+    //     document.getElementById("PRODUCT").innerHTML=null;
+    //     append(res2);
+    // }else if(data==="Hair_Removal_Tools"){
+    //     var res= await fetch("http://localhost:4000/products?category=Hair_Removal_Tools");
+    //     var res2= await res.json()
+    //     console.log(res2);
+    //     document.getElementById("PRODUCT").innerHTML=null;
+    //     append(res2);
+    // }else if(data==="Massage_Tools"){
+    //     var res= await fetch("http://localhost:4000/products?category=Massage_Tools");
+    //     var res2= await res.json()
+    //     console.log(res2);
+    //     document.getElementById("PRODUCT").innerHTML=null;
+    //     append(res2);
+    // }
 }
 // &#9733;
 // brand
