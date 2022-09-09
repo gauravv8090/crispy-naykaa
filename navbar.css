@@ -1,0 +1,520 @@
+body{
+    height: 100vh;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+.topnav_container{
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.g_topbanner{
+    /* margin-top: 0px; */
+     height: fit-content;
+    background-image:url("/top_nav_banner.png");
+    background-size:65%;
+    background-repeat: no-repeat;
+    background-color: #ff91bb; 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,0.5fr);
+    justify-content:center ;
+    align-items: center;
+}
+#beauty_bonanza{
+  margin-left:20% ;  
+ margin-top:9px;
+ /* height: 15px; */
+ animation: slide 3s infinite;
+ font-family: 'Inter', sans-serif;
+ font-size: 16px;
+}
+#beauty_bonanza:hover{
+    cursor: pointer;
+    color: red;
+}
+
+@keyframes slide{
+ 0%{transform: translateY(10px);opacity: 1;}   
+5%,50%{transform: translateY(3px);opacity: 1;}
+51%{transform: translateY(-10px);opacity: 0;}
+52%,100%{transform: translateY(10px);opacity: 0;}
+}
+
+.navbar_icons{
+    width:70%;
+    display: flex;
+    margin-left: 25%;
+    margin-right: 10px;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 35px;
+    align-items: center;
+}
+/* .material-symbols-outlined{
+    margin-top: 5px;
+} */
+.navbar_icons>p{
+font-weight: 400;
+font-family: 'Inter', sans-serif;
+font-size: 14px;
+}
+.navbar_icons>p:hover{
+    cursor: pointer;
+    color: red;
+}
+.navbar_icons>h1{
+    
+    font-weight: 100;
+}
+
+
+.topnav_category{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(202, 195, 195);
+    background-color: white;
+}
+.category ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+.category>ul>li>p:hover{
+    color: orangered;
+    font-weight: 600;   
+}
+.search{
+    display: grid;
+    grid-template-columns: repeat(3,0.5fr );
+    justify-content: space-evenly;
+    gap: 40px;
+    padding: 3%;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 25%;
+    margin-right: 10px;
+    
+}
+
+#nykaa_search{
+    display: flex;
+   background-color:  #f4f4f4;
+    align-items: center;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    justify-content: space-evenly;
+}
+#nykaa_search>input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-decoration: #939393;
+}
+
+#shopping_bag:hover{
+    cursor: pointer;
+}
+.account{
+    display: flex;
+    align-items: center;
+    
+}
+.account:hover{
+cursor: pointer;
+}
+.badge{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: palevioletred;
+    top: 0;
+    right: 0;
+    z-index: 4px;
+    border-radius: 6px;
+}
+
+
+
+
+.sub_menu_1{
+    display: none;
+}
+.category ul li:hover .sub_menu_1{
+    display: grid;
+    grid-template-columns: repeat();
+    width: 90%;
+    position: absolute;
+    background: white;
+    margin-top: 0%;
+    margin-left: -25%;
+    height: 60px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+   
+}
+.sub_menu_1 ul li{
+    color: #8f8e9a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 50;
+    font-size: 14px;
+    
+}
+.sub_menu_1>ul>li:hover{
+    color: orangered;
+    font-weight: 600;
+    border-bottom: solid 2px orangered;
+}
+/* .sub_menu_1 ul li:hover{
+    color: orangered;
+} */
+.sub_menu_2{
+    display: none;
+}
+.category>ul>li>.sub_menu_1>ul>li:hover .sub_menu_2{
+    display: flex;
+    /* grid-template-columns: repeat(6,1fr); */
+    position: absolute;
+    top: 41px;
+    left: 5%;
+    background-color: white;
+    height: fit-content;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    width: 90%;
+}
+
+.category>ul>li>.sub_menu_1>ul>li:hover .sub_menu_2 ul{
+    display: block;
+    padding: 20px;
+    background-color: #f4f4f4;
+    height: 420px;
+    width: 15%;
+
+   
+}
+    .sub_menu_2 ul li a{
+        text-decoration: none;
+        line-height: 25px;
+        color: #b9b9c0;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 50;
+    }
+    .category>ul>li:hover .sub_menu_1 ul:nth-child(2n){
+        background: linear-gradient(to left,white 0%,white 100%);
+    }
+    .sub_menu_2 ul li a:hover,.sub_menu_2 ul li a b:hover{
+        color: orangered;
+        }
+
+
+
+        .sub_menu_4{
+            display: none;
+        }
+     #NykaaFashion:hover .sub_menu_4{
+        display: block;
+        height: 700px;
+        width: 700px;
+        position: absolute;
+     }
+
+
+
+
+
+    
+    .category ul li:hover .sub_menu_4{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        width: 90%;
+        position: absolute;
+        background: white;
+        margin-top: 0%;
+        margin-left: -25%;
+        height: 420px;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+       
+    }
+    .category ul li:hover #cards{
+        
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+   #cards ul:nth-child(2n+1){
+        background: linear-gradient(to left,white 0%,white 100%);
+    }
+    .category ul li:hover .sub_menu_4 ul{
+        display: block;
+        padding: 20px;
+        background-color: #f4f4f4;
+        height: 420px;
+        
+
+ 
+    }
+    .category ul li:hover .sub_menu_4 ul li a{
+        text-decoration: none;
+        color: #8f8e9a;
+        font-weight: 100;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        line-height: 25px;
+       }
+
+ .sub_menu_4 ul:nth-child(2n){
+        background: linear-gradient(to left,white 0%,white 100%);
+    }
+    .category ul li .sub_menu_4 ul li a:hover , .category ul li .sub_menu_2 ul li b:hover{
+        text-decoration: orangered;
+        }
+
+
+
+
+
+
+.dropdown_category{
+    display :flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+.dropdown_category ul{
+    display :inline-flex;
+    width: 90%;
+    height: 40px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.dropdown_category>ul>li>a{
+text-decoration: none;
+color: #8f8e9a;
+font-family: 'Inter', sans-serif;
+font-size: 14px;
+}
+.offers{
+    display: flex;
+    position: relative;
+}
+.dropdown_category>ul>li:hover{
+    color: orangered;
+    font-weight: 600;
+    border-bottom: solid 2px orangered;
+}
+.sub_menu{
+  display: none;
+}
+.dropdown_category>ul>li:hover .sub_menu{
+    display: grid;
+    grid-template-columns: repeat(6,0.8fr);
+    position: absolute;
+    top: 60px;
+    left: 5%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+}
+.sub_menu ul li a{
+    text-decoration: none;
+    line-height: 25px;
+    color: #b9b9c0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 50;
+    width: 90%;
+}
+.sub_menu ul li a:hover,.sub_menu ul li a b:hover{
+color: orangered;
+}
+.dropdown_category>ul>li:hover .sub_menu ul{
+display: block;
+padding: 20px;
+background-color: #f4f4f4;
+height: 420px;
+}
+
+.dropdown_category>ul>li:hover .sub_menu ul:nth-child(2n){
+    background: linear-gradient(to left,white 0%,white 100%);
+}
+.div_1{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width:1080px){
+    .topnav_container,.offers{
+        display: none;
+    }
+    .div_1{
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        width: 90%;
+        justify-content: center;
+      
+        
+        
+       
+    }
+    .div_2{
+        height: fit-content;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .div_3 ul{
+        display: flex;
+        list-style: none;
+        height: 70px;
+        width: 160px;
+        justify-content: space-between;
+        align-items: center;
+
+    }   
+    .media_cb ul{
+       display: none;
+    }
+    
+    .div_4{
+        display: flex;
+        height: 70px;
+        width: 80px;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .div_4 a:hover{
+        color: orangered;
+    }
+    .div_1 form input{
+        height: 30px;
+        width: 95%;
+        margin-left:0px;
+        border: none;
+        outline: none; 
+        background-color:  #f4f4f4;
+    }
+    .div_1 form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color:  #f4f4f4;
+        margin-left:5%;
+    }
+    .badge_m{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: rgb(55, 53, 54);
+        top: 0;
+        right: 0;
+        z-index: 4px;
+        border-radius: 6px;
+    }
+    
+    
+    
+    .threeDots{
+        background-color: white;
+        outline: none;
+        border: none;
+    }
+    .sub_menu_3 {
+        display: none;
+    
+      }
+     
+  .media_cb{
+    position: absolute;
+    width: 170px;
+    height: 30px;
+  }
+  .media_cb ul li:hover{
+    color: orangered;
+    
+    
+  }
+  .media_cb ul li:hover .sub_menu_3{
+    display: flex;
+    flex-direction: column;
+  }
+  .sub_menu_3 ul li{
+    justify-content: space-between;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 40px;
+      
+  }
+  .sub_menu_3 ul li a{
+    text-decoration: none;
+    color: #b9b9c0;
+  }
+  .sub_menu_3 ul li a:hover{
+    color: orangered;
+    text-decoration: none;
+  }
+  
+  
+  .media_cb ul li:hover .sub_menu_3 ul{
+    display: block;
+    padding: 20px;
+    background-color: white;
+    width: 170px;
+    height: fit-content;
+    position: absolute;
+      top: 90%;
+      left: 10px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+    .threeDots:hover .media_cb ul{
+        width: 170px;
+      list-style: none;
+      justify-content: space-between;
+      position: absolute;
+      top: -50% ;
+      left: -35%;
+      display: inline-flex; 
+      color: black;
+      justify-content: space-between;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+    }
+    .threeDots:hover {
+        cursor: pointer;
+        color: orangered;
+    }
+    }
+
+
+    
+    
