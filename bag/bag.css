@@ -2,18 +2,24 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    display: block;
+    background-color:#f3f3f3;
   }
   #s_main_bag_head {
     /* border: 1px solid red; */
     width: 28%;
     /* margin: auto; */
     position: absolute;
-    right: 0;
+    right: 35%;
+    min-height: 95vh;
+    /* height: 90vh; */
+    /* margin-bottom: 50px; */
+    /* padding-bottom: 50px; */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
+    background-color: white;
   }
   .s_bag_head {
-    width: 25%;
+    width: 27%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +38,7 @@ body {
     margin: 13% auto;
     align-items: center;
     font-size: 18px;
+    display: none;
   }
   #s_blank_bag > img {
     height: 190px;

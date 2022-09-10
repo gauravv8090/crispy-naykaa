@@ -72,7 +72,7 @@
           </div>
            <div>
             <div>Discount</div>
-            <div>0</div>
+            <div class="discount">0</div>
           </div>
            <div>
             <div>Use Reward Points (2000)</div>
@@ -231,7 +231,7 @@ else if(val=="Net Banking")
         }
       }
     let address = JSON.parse(localStorage.getItem("addressDetails")) || [];
-     let bagdata = JSON.parse(localStorage.getItem("finalproduct"));
+     let bagdata = JSON.parse(localStorage.getItem("nykaaProduct"));
      let cart=JSON.parse(localStorage.getItem("cart"));
   
     window.onclick = (e) => {
@@ -279,8 +279,14 @@ let v=+(bagdata[i].price)
   sum=sum+v
 }
 
-    document.querySelector(".total").innerHTML=`₹${sum}`
-   document.querySelector(".grandtotal").innerHTML=`₹${sum}`
+  //  document.querySelector(".total").innerHTML=`₹${sum}`
+  //  document.querySelector(".grandtotal").innerHTML=`₹${sum}`
+  let price1=JSON.parse(localStorage.getItem("price1"))
+  let price2=JSON.parse(localStorage.getItem("price2"))
+  let price3=JSON.parse(localStorage.getItem("price3"))
+  document.querySelector(".total").innerHTML = `₹${price3}`;
+  document.querySelector(".grandtotal").innerHTML = `₹${price1}`;
+  document.querySelector(".discount").innerHTML = `₹${price2}`;
 
 
 let div3=document.querySelector("#div3")

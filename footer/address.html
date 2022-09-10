@@ -104,8 +104,8 @@
             <div>free</div>
           </div>
           <div>
-            <div>Discount</div>
-            <div>0</div>
+            <div >Discount</div>
+            <div class="discount">0</div>
           </div>
           <div>
             <div>Use Reward Points (2000)</div>
@@ -200,7 +200,7 @@
   });
   function myFunction() {
     let right = document.querySelector("#right");
-    let bagdata = JSON.parse(localStorage.getItem("finalproduct"));
+    let bagdata = JSON.parse(localStorage.getItem("nykaaProduct"));
     console.log("he", bagdata);
     let counter = bagdata.length;
     let h3 = document.createElement("h3");
@@ -209,7 +209,7 @@
     h3.style.paddingLeft = "8px";
     document.querySelector("#h3div").append(h3);
     bagdata.map((ele) => {
-      let { img_url, title, price } = ele;
+      let { image1, title, price } = ele;
       let card2 = document.createElement("div");
       card2.id = "card2";
 
@@ -220,7 +220,7 @@
 
       let img = document.createElement("img");
       img.id = "smallimg";
-      img.src = img_url;
+      img.src = image1;
 
       let p = document.createElement("p");
       p.innerHTML = title;
@@ -251,7 +251,11 @@
 
     sum = sum + v;
   }
+  let price1=JSON.parse(localStorage.getItem("price1"))
+  let price2=JSON.parse(localStorage.getItem("price2"))
+  let price3=JSON.parse(localStorage.getItem("price3"))
+  document.querySelector(".total").innerHTML = `₹${price3}`;
+  document.querySelector(".grandtotal").innerHTML = `₹${price1}`;
+  document.querySelector(".discount").innerHTML = `₹${price2}`;
 
-  document.querySelector(".total").innerHTML = `₹${sum}`;
-  document.querySelector(".grandtotal").innerHTML = `₹${sum}`;
 </script>

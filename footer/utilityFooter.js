@@ -17,8 +17,8 @@ export const footer = ()=>{
                 <div class="p1"> <i class="fa-solid fa-mobile-screen"></i> EXPERIENCE THE NYKAA MOBILE APP</div>
             </div>
             <div id="immg">
-                <img  src="./img/Buy Cosmetics Products & Beauty Products Online in India at Best Price _ Nykaa-12.svg">
-                <img  src="./img/Buy Cosmetics Products & Beauty Products Online in India at Best Price _ Nykaa-13.svg">
+                <img  src="https://milaapclone.netlify.app/image/PlayStoreLogo.png">
+                <img  src="https://milaapclone.netlify.app/image/AppleStoreLogo.png">
             </div>
         </div>
         <div class="cls1" id="cls1hide">

@@ -1,13 +1,13 @@
 *{
     margin: 0;
-    background-color: #f3f3f3;  
+    /* background-color: #f3f3f3;   */
   }
   #parent{
       background-color: #f3f3f3;
   }
   #HairTools{
       width: 100%;
-      padding-top: 300px;
+      /* padding-top: 5px; */
       text-align: center;
   }
   #G-slide{
@@ -31,7 +31,7 @@
     /* height: 1000px; */
     width: 100%;
     margin-top: 1%;
-    border: 4px solid saddlebrown;
+    /* border: 4px solid saddlebrown; */
   }
   #G-lable{
     width: 100%;
@@ -44,16 +44,16 @@
     width: 80%;
     margin: auto;
     /* height: 1000px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     /* position: absolute; */
   }
   .FILTERANDSORT{
     width: 23%;
     height: 800px;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     position: sticky;
-    top: 0;
+    top: 150px;
   }
   #PRODUCT{
     width: 70%;

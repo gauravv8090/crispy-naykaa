@@ -5,8 +5,10 @@ body{
     padding:0;
 }
 .topnav_container{
-    position: sticky;
-    top: 0;
+    position: fixed;
+    /* top: 0; */
+    background-color: white;
+    width: 100%;
     z-index: 4;
 }
 .g_topbanner{
@@ -52,6 +54,9 @@ body{
     height: 35px;
     align-items: center;
 }
+#account_p{
+    margin-top: 14px;
+}
 /* .material-symbols-outlined{
     margin-top: 5px;
 } */
@@ -59,6 +64,7 @@ body{
 font-weight: 400;
 font-family: 'Inter', sans-serif;
 font-size: 14px;
+margin-top: 15px;
 }
 .navbar_icons>p:hover{
     cursor: pointer;
@@ -88,7 +94,8 @@ font-size: 14px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 14px;
-    
+    margin-top: 25px;
+
 }
 
 .category>ul>li>p:hover{
@@ -162,12 +169,11 @@ cursor: pointer;
     width: 90%;
     position: absolute;
     background: white;
-    margin-top: 0%;
     margin-left: -25%;
-    height: 60px;
+    /* height: 60px; */
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-   
+   /* background-color: red; */
 }
 .sub_menu_1 ul li{
     color: #8f8e9a;
@@ -191,12 +197,14 @@ cursor: pointer;
     display: flex;
     /* grid-template-columns: repeat(6,1fr); */
     position: absolute;
-    top: 41px;
+    /* z-index: 200px; */
+    /* top: 100px; */
     left: 5%;
     background-color: white;
     height: fit-content;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
     width: 90%;
+    /* background-color: #ff91bb; */
 }
 
 .category>ul>li>.sub_menu_1>ul>li:hover .sub_menu_2 ul{
@@ -312,6 +320,8 @@ font-size: 14px;
 .offers{
     display: flex;
     position: relative;
+    padding-top: 10%;
+    background-color: white;
 }
 .dropdown_category>ul>li:hover{
     color: orangered;
@@ -325,8 +335,11 @@ font-size: 14px;
     display: grid;
     grid-template-columns: repeat(6,0.8fr);
     position: absolute;
-    top: 60px;
+    /* top: 200px; */
+    z-index: 10;
+    /* height: 40%; */
     left: 5%;
+    background-color: white;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 
 }
@@ -346,7 +359,7 @@ color: orangered;
 display: block;
 padding: 20px;
 background-color: #f4f4f4;
-height: 420px;
+height: fit-content;
 }
 
 .dropdown_category>ul>li:hover .sub_menu ul:nth-child(2n){
@@ -377,8 +390,12 @@ height: 420px;
         display: flex;
         flex-direction: column;
         padding: 2%;
-        width: 90%;
+        width: 100%;
+        z-index: 10;
         justify-content: center;
+        position: fixed;
+
+        background-color: white;
       
         
         

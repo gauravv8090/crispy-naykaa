@@ -20,3 +20,7 @@ document.getElementById("s_register_proceed").onclick =async ()=>{
         },
       });
 }
+document.getElementById("s_register_proceed").onclick =()=>{
+  location.href = "../index.html"
+  localStorage.setItem("full_name",JSON.stringify(document.getElementById("fullname").value))
+}

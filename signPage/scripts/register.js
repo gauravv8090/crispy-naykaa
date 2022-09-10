@@ -15,7 +15,7 @@ setTimeout(() => {
 
 // for countdown otp second
 const countdown = () => {
-  let timeleft = 5;
+  let timeleft = 10;
   let downloadTimer = setInterval(function () {
     if (timeleft <= 0) {
       clearInterval(downloadTimer);

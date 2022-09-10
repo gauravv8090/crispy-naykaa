@@ -1,5 +1,8 @@
+import { footer } from "./footer/utilityFooter.js";
+import { navbar } from "./utilityNavbar.js";
 
-
+document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("footer").innerHTML = footer();
 
 let id= JSON.parse(localStorage.getItem("SepKey"));
 
@@ -30,17 +33,11 @@ function style(data){
 document.querySelector(".Div8_b1").addEventListener("click", ()=>{
         cartArr.push(data)
         localStorage.setItem("nykaaProduct", JSON.stringify(cartArr));
+        document.querySelector(".Div8_b1").style.backgroundColor = "pink"
     })
 }
 
 getsepe();
 
 
-// var prod = document.querySelector(".Div8_b1");
-// console.log(prod.innerHTML);
-// for(var i=0; i<prod.length; i++){
-//     console.log("yes");
-//     prod[i].addEventListener("click", ()=>{
-//         console.log("YESS");
-//     })
-// }
+

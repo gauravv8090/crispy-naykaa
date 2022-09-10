@@ -23,7 +23,7 @@ if(arr.length==0){
 
 //      var a_name="guru";
 // localStorage.setItem("user",a_name);
-var user_name=localStorage.getItem("user") || "";
+var user_name=JSON.parse( localStorage.getItem("full_name")) || "";
 var element3 = document.getElementById("account_p");
 var element4 = document.getElementById("logged_in");
 if(user_name!=""){   

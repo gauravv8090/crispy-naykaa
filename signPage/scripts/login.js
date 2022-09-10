@@ -21,7 +21,7 @@ document.getElementById("close_alert").onclick = () => {
 
 // for countdown otp second
 const countdown = () => {
-  let timeleft = 5;
+  let timeleft = 10;
   let downloadTimer = setInterval(function () {
     if (timeleft <= 0) {
       clearInterval(downloadTimer);
@@ -51,7 +51,7 @@ document.getElementById("s_register_proceed").onclick = () => {
 
     document.getElementById("close_alert").onclick = () => {
       document.getElementById("alertBox").style.display = "none";
-      location.href = "signUp.html";
+      location.href = "../index.html";
     };
   }
 };
