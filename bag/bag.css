@@ -1,124 +1,129 @@
 body {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    display: block;
-    background-color:#f3f3f3;
-  }
-  #s_main_bag_head {
-    /* border: 1px solid red; */
-    width: 28%;
-    /* margin: auto; */
-    position: absolute;
-    right: 35%;
-    min-height: 95vh;
-    /* height: 90vh; */
-    /* margin-bottom: 50px; */
-    /* padding-bottom: 50px; */
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    background-color: white;
-  }
-  .s_bag_head {
-    width: 27%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0;
-    border-bottom: 1px solid rgb(216, 206, 206);
-    padding: 8px;
-    position: fixed;
-    background-color: white;
-  }
-  #s_blank_bag {
-    display: flex;
-    flex-direction: column;
-    padding: 10%;
-    width: 70%;
-    text-align: center;
-    margin: 13% auto;
-    align-items: center;
-    font-size: 18px;
-    display: none;
-  }
-  #s_blank_bag > img {
-    height: 190px;
-    width: 70%;
-  }
-  #s_blank_bag > button {
-    padding: 4% 15%;
-    margin: 1%;
-    background-color: #ec1071;
-    border-radius: 10px;
-    border: 0;
-    color: white;
-    font-size: 18px;
-  }
-  #s_content_card {
-    padding: 2%;
-    margin-top: 10%;
-  }
-  .s_bag_card {
-    /* border: 1px solid red; */
-    border-radius: 10px;
-    padding: 2%;
-    margin: 5% 0;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
-  .s_bag_card_top {
-    display: flex;
-    border-bottom: 1px solid rgb(216, 206, 206);
-  }
-  .s_bag_card_top > img {
-    height: 90px;
-    /* border: 1px solid red; */
-    margin-right: 3%;
-  }
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  display: block;
+  background-color: #f3f3f3;
+}
+#s_main_bag_head {
+  /* border: 1px solid red; */
+  width: 28%;
+  /* margin: auto; */
+  position: absolute;
+  right: 35%;
+  min-height: 95vh;
+  /* height: 90vh; */
+  /* margin-bottom: 50px; */
+  /* padding-bottom: 50px; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: white;
+}
+.s_bag_head {
+  width: 27%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  border-bottom: 1px solid rgb(216, 206, 206);
+  padding: 8px;
+  position: fixed;
+  background-color: white;
+}
+#s_blank_bag {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  width: 70%;
+  text-align: center;
+  margin: 13% auto;
+  align-items: center;
+  font-size: 18px;
+  display: none;
+}
+#s_blank_bag > img {
+  height: 190px;
+  width: 70%;
+}
+#s_blank_bag > button {
+  padding: 4% 15%;
+  margin: 1%;
+  background-color: #ec1071;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-size: 18px;
+}
+#s_content_card {
+  padding: 2%;
+  margin-top: 10%;
+}
+.s_bag_card {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  padding: 2%;
+  margin: 5% 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  cursor: pointer;
+}
+.s_bag_card_top {
+  display: flex;
+  border-bottom: 1px solid rgb(216, 206, 206);
+}
+.s_bag_card_top > img {
+  height: 90px;
+  /* border: 1px solid red; */
+  margin-right: 3%;
+}
 
-  .s_bag_card_bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2%;
-  }
+.s_bag_card_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
 
-  #s_bag_pricedetails_parent {
-    padding: 2%;
-    margin-bottom: 15%;
-  }
-  #s_bag_pricedetails {
-    /* border: 1px solid red; */
-    border-radius: 10px;
-    padding: 2%;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
-  .s_bag_pricedetais_part {
-    display: flex;
-    justify-content: space-between;
-    margin: 2%;
-  }
-  #s_bag_total_price {
-    /* padding: 2%; */
-    border-radius: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 28%;
-    background-color: white;
-  }
-  #s_bag_total_flex {
-    /* border: 1px solid red; */
-    padding: 2% 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
-  #s_bag_total_flex > div > button {
-    font-size: 25px;
-    background-color: #ec1071;
-    color: white;
-    border: 0;
-    padding: 5% 10%;
-    border-radius: 10px;
-  }
-  /* #s_blank_bag{
+#s_bag_pricedetails_parent {
+  padding: 2%;
+  margin-bottom: 15%;
+}
+#s_bag_pricedetails {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  padding: 2%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.s_bag_pricedetais_part {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+#s_bag_total_price {
+  /* padding: 2%; */
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 28%;
+  background-color: white;
+}
+#s_bag_total_flex {
+  /* border: 1px solid red; */
+  padding: 2% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+#s_bag_total_flex > div > button {
+  font-size: 25px;
+  background-color: #ec1071;
+  color: white;
+  border: 0;
+  padding: 5% 10%;
+  border-radius: 10px;
+}
+/* #s_blank_bag{
     display: none;
   } */

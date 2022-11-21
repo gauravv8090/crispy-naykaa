@@ -31,6 +31,7 @@ const append = () => {
     child1_div.innerText = el.title;
     let child1_span = document.createElement("span");
     child1_span.setAttribute("class", "material-symbols-outlined");
+
     child1_span.innerText = "delete";
     child1_span.onclick = () => {
       append();
@@ -95,9 +96,12 @@ const append = () => {
 
     s_proceed_price.innerText = s_final_price.innerText;
 
-    localStorage.setItem("price1",JSON.stringify( s_proceed_price.innerText ))
-      localStorage.setItem("price2",JSON.stringify( s_discounted_price.innerText ))
-      localStorage.setItem("price3",JSON.stringify( s_mian_price.innerText ))
+    localStorage.setItem("price1", JSON.stringify(s_proceed_price.innerText));
+    localStorage.setItem(
+      "price2",
+      JSON.stringify(s_discounted_price.innerText)
+    );
+    localStorage.setItem("price3", JSON.stringify(s_mian_price.innerText));
 
     child2_child1_select.onclick = () => {
       console.log(child2_child1_select.value * el.price);
@@ -114,9 +118,12 @@ const append = () => {
         Number(s_mian_price.innerText) - Number(s_final_price.innerText);
 
       s_proceed_price.innerText = s_final_price.innerText;
-      localStorage.setItem("price1",JSON.stringify( s_proceed_price.innerText ))
-      localStorage.setItem("price2",JSON.stringify( s_discounted_price.innerText ))
-      localStorage.setItem("price3",JSON.stringify( s_mian_price.innerText ))
+      localStorage.setItem("price1", JSON.stringify(s_proceed_price.innerText));
+      localStorage.setItem(
+        "price2",
+        JSON.stringify(s_discounted_price.innerText)
+      );
+      localStorage.setItem("price3", JSON.stringify(s_mian_price.innerText));
     };
   });
 };
@@ -136,11 +143,10 @@ if (s_proceed_price.innerText === "0") {
 }
 // let bag = document.getElementById("arrow")
 document.getElementById("s_arrow").onclick = () => {
-    document.querySelector("body").style.display = "none";
-    console.log("object");
-  
+  document.querySelector("body").style.display = "none";
+  console.log("object");
 };
 
-document.getElementById("godj").onclick = ()=>{
-  location.href = "../footer/address.html"
-}
+document.getElementById("godj").onclick = () => {
+  location.href = "../footer/address.html";
+};

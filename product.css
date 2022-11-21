@@ -1,181 +1,182 @@
-*{
-    margin: 0;
-    /* background-color: #f3f3f3;   */
-  }
-  #parent{
-      background-color: #f3f3f3;
-  }
-  #HairTools{
-      width: 100%;
-      /* padding-top: 5px; */
-      text-align: center;
-  }
-  #G-slide{
-      background-color: none;
-      width: 80%;
-      margin: auto;
-  }
-  #G-slide .carousel-control-next-icon{
-      background-color: black;
-      border-radius: 50%;
-      padding: 40px;
-      /* width: 0%; */
-      /* border-radius: 50%; */
-    }
-    #G-slide .carousel-control-prev-icon{
-      background-color: black;
-      border-radius: 50%;
-      padding: 40px;
-  }
-  #mainProd{
-    /* height: 1000px; */
-    width: 100%;
-    margin-top: 1%;
-    /* border: 4px solid saddlebrown; */
-  }
-  #G-lable{
-    width: 100%;
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 0;
-  }
+* {
+  margin: 0;
+  /* background-color: #f3f3f3;   */
+}
+#parent {
+  background-color: #f3f3f3;
+}
+#HairTools {
+  width: 100%;
+  /* padding-top: 5px; */
+  text-align: center;
+}
+#G-slide {
+  background-color: none;
+  width: 80%;
+  margin: auto;
+}
+#G-slide .carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 40px;
+  /* width: 0%; */
+  /* border-radius: 50%; */
+}
+#G-slide .carousel-control-prev-icon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 40px;
+}
+#mainProd {
+  /* height: 1000px; */
+  width: 100%;
+  margin-top: 1%;
+  /* border: 4px solid saddlebrown; */
+}
+#G-lable {
+  width: 100%;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 0;
+}
 
-  #area{
-    width: 80%;
-    margin: auto;
-    /* height: 1000px; */
-    /* border: 1px solid black; */
-    display: flex;
-    /* position: absolute; */
-  }
-  .FILTERANDSORT{
-    width: 23%;
-    height: 800px;
-    /* border: 1px solid salmon; */
-    position: sticky;
-    top: 150px;
-  }
-  #PRODUCT{
-    width: 70%;
-    /* height: 1000px; */
-    margin-left: 3%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    /* border: 2px solid crimson; */
-  }
-  .card{
-    display: block;
-    background-color: white;
-    text-align: center;
-    height: 500px;
-    /* border: 2px solid indianred; */
+#area {
+  width: 80%;
+  margin: auto;
+  /* height: 1000px; */
+  /* border: 1px solid black; */
+  display: flex;
+  /* position: absolute; */
 }
-.card:hover #addToBag{
-     display: flex;
+.FILTERANDSORT {
+  width: 23%;
+  height: 800px;
+  /* border: 1px solid salmon; */
+  position: sticky;
+  top: 150px;
 }
-#G-five, #G-des{
-    background-color: white;
+#PRODUCT {
+  width: 70%;
+  /* height: 1000px; */
+  margin-left: 3%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  /* border: 2px solid crimson; */
 }
-#G-five{
-    color: green;
-    text-align: left;
-    padding: 20px 0 0 20px;
+.card {
+  display: block;
+  background-color: white;
+  text-align: center;
+  height: 500px;
+  /* border: 2px solid indianred; */
+  cursor: pointer;
 }
-#G-img{
-      /* height: 300px; */
-    width: 90%;
-    background-color: white;
-    margin: auto;
-    /* border: 1px solid red; */
-  }
-  #G-img>img{
-    width: 100%;
-    /* border: 1px solid red; */
-  }
-  #price{
-    color: grey;
-    background-color: white;
-  }
-  #ear{
-    text-decoration: line-through;
-    color: grey;
-    background-color: white;
-  }
-  #G-real{
-    color: black;
-    background-color: white;    
-  }
-  #Price-Div{
-    background-color: white;
-    /* margin-top: -2%; */
+.card:hover #addToBag {
+  display: flex;
+}
+#G-five,
+#G-des {
+  background-color: white;
+}
+#G-five {
+  color: green;
+  text-align: left;
+  padding: 20px 0 0 20px;
+}
+#G-img {
+  /* height: 300px; */
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+#G-img > img {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+#price {
+  color: grey;
+  background-color: white;
+}
+#ear {
+  text-decoration: line-through;
+  color: grey;
+  background-color: white;
+}
+#G-real {
+  color: black;
+  background-color: white;
+}
+#Price-Div {
+  background-color: white;
+  /* margin-top: -2%; */
 
-    /* border: 1px solid rebeccapurple; */
-  }
-  #G-OFF{
-    background-color: white;
-    color: green;
-  }
-  #rating{
-    background-color: white;
-    padding-top: 5px;
-  }
-  #addToBag{
-    margin-top: 5px;
-    height: 70px;
-    width: 100%;
-    /* border: 1px solid gold; */
-    border-top: 1px solid rgb(229, 223, 223);
-    background-color: white;
-    display: flex;
-    display: none;
-  }
-  /* #addToBag :hover{
+  /* border: 1px solid rebeccapurple; */
+}
+#G-OFF {
+  background-color: white;
+  color: green;
+}
+#rating {
+  background-color: white;
+  padding-top: 5px;
+}
+#addToBag {
+  margin-top: 5px;
+  height: 70px;
+  width: 100%;
+  /* border: 1px solid gold; */
+  border-top: 1px solid rgb(229, 223, 223);
+  background-color: white;
+  display: flex;
+  display: none;
+}
+/* #addToBag :hover{
     display: contents;
   } */
 
-  #hert{
-    width: 30%;
-    /* border: 1px solid red; */
-    /* color: red; */
-    /* font-size: 60px; */
+#hert {
+  width: 30%;
+  /* border: 1px solid red; */
+  /* color: red; */
+  /* font-size: 60px; */
+}
+#add {
+  width: 80%;
+  background-color: #fc2779;
+  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
+}
+#add1 {
+  /* height: 70px; */
+  width: 100%;
+  padding-top: 9%;
+  background-color: #fc2779;
+  /* border: 1px solid black; */
+}
+#add1 > h5 {
+  background-color: #fc2779;
+  color: white;
+}
 
-  }
-  #add{
-    width: 80%;
-    background-color: #fc2779;
-    /* align-items: center; */
-    justify-content: center;
-    align-items: center;
+#heart {
+  color: #fc2779;
+  font-size: 48px;
+  background-color: white;
 }
-#add1{
-    /* height: 70px; */
-    width: 100%;
-    padding-top: 9%;
-    background-color:#fc2779;
-    /* border: 1px solid black; */
+#hert {
+  background-color: white;
 }
-#add1>h5{
-    background-color: #fc2779;
-    color: white;
+#sortTag {
+  width: 100%;
+  background-color: white;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
 }
-
-  #heart{
-    color: #fc2779;
-    font-size: 48px;
-    background-color: white;
-  }
-  #hert{
-    background-color: white;
-  }
-#sortTag{
-    width: 100%;
-    background-color: white;
-    height: 60px;
-    font-size: 20px;
-    text-align: center;
-  }
-  #catF{
+#catF {
   width: 100%;
   background-color: white;
   height: 60px;
@@ -184,6 +185,7 @@
   margin-top: 20px;
 }
 
-#catF>option, #sortTag>option{
+#catF > option,
+#sortTag > option {
   background-color: white;
 }

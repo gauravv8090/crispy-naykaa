@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/adress.css">
+    <title>Address</title>
+    <link rel="stylesheet" href="./style/adress.css" />
   </head>
- <body>
+  <body>
     <div id="navbar">
       <div id="vadi">
         <div id="nav">
           <div id="logo">
-            <img 
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK47iYyT-3X758RkOppaeJ6z-1UPe_ehVqq-ldzFiA_Rw3Cwv_vQY_vk0MtNo7DsZg_Eg&usqp=CAU"
-              alt=""/> 
-            </div>
-           
-       <div id="nav_container">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK47iYyT-3X758RkOppaeJ6z-1UPe_ehVqq-ldzFiA_Rw3Cwv_vQY_vk0MtNo7DsZg_Eg&usqp=CAU"
+              alt=""
+            />
+          </div>
+
+          <div id="nav_container">
             <div id="login">1-LOGIN</div>
             <div onclick="window.location.href='address.html'" id="address">
               2 - ADDRESS
@@ -30,11 +31,15 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
     <div id="main">
       <div id="addressTable">
-        <div tabindex="1" onclick="window.location.href='address.html'" id="new1">
-           New Address
+        <div
+          tabindex="1"
+          onclick="window.location.href='address.html'"
+          id="new1"
+        >
+          New Address
         </div>
         <div id="savedAddress" tabindex="1">
           Saved Address <span id="counter"> 0</span>
@@ -88,7 +93,7 @@
           </div>
         </form>
       </div>
-        <div id="right">
+      <div id="right">
         <div id="h3div"></div>
 
         <div id="card0"></div>
@@ -104,7 +109,7 @@
             <div>free</div>
           </div>
           <div>
-            <div >Discount</div>
+            <div>Discount</div>
             <div class="discount">0</div>
           </div>
           <div>
@@ -114,7 +119,7 @@
           <div>
             <div>Grand Total</div>
             <div class="grandtotal"></div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -166,8 +171,8 @@
       input.style.color = "white";
       input.style.padding = "0px";
       input.addEventListener("click", () => {
-        console.log(index)
-        localStorage.setItem("INDEX",index)
+        console.log(index);
+        localStorage.setItem("INDEX", index);
         window.location.href = "payment.html";
       });
 
@@ -251,11 +256,10 @@
 
     sum = sum + v;
   }
-  let price1=JSON.parse(localStorage.getItem("price1"))
-  let price2=JSON.parse(localStorage.getItem("price2"))
-  let price3=JSON.parse(localStorage.getItem("price3"))
+  let price1 = JSON.parse(localStorage.getItem("price1"));
+  let price2 = JSON.parse(localStorage.getItem("price2"));
+  let price3 = JSON.parse(localStorage.getItem("price3"));
   document.querySelector(".total").innerHTML = `₹${price3}`;
   document.querySelector(".grandtotal").innerHTML = `₹${price1}`;
   document.querySelector(".discount").innerHTML = `₹${price2}`;
-
 </script>
