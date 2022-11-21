@@ -27,7 +27,7 @@ function append(data) {
     } else {
       rating = "&#9733;&#9733;&#9733;&#9734;&#9734;";
     }
-    cards += `<div class="card">
+    cards += `<div class="card"  id="card"> 
         <h6 id="G-five">BEST SELLER</h6>
         <div id="G-img"> <img src="${el.image1}" alt="${el.id}">
         <h6 id="G-des">${el.card_title}</h6>

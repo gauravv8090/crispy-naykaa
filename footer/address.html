@@ -214,7 +214,7 @@
     h3.style.paddingLeft = "8px";
     document.querySelector("#h3div").append(h3);
     bagdata.map((ele) => {
-      let { image1, title, price } = ele;
+      let { image1, title, off_price } = ele;
       let card2 = document.createElement("div");
       card2.id = "card2";
 
@@ -232,7 +232,7 @@
       p.style.borderBottom = "1px solid rgb(223, 213, 213)";
 
       let h4 = document.createElement("h4");
-      h4.innerHTML = `₹${price}`;
+      h4.innerHTML = `₹${off_price}`;
 
       div1.append(img);
       div2.append(p, h4);
@@ -243,16 +243,18 @@
 
   myFunction();
 
-  let bagdata = JSON.parse(localStorage.getItem("finalproduct"));
+  let bagdata1 = JSON.parse(localStorage.getItem("finalproduct"));
   let total = document.querySelector("#total");
-  let counter = bagdata.length;
+  console.log(bagdata1.length);
+  let counter = bagdata1.length;
+
   let h3 = document.createElement("h3");
   h3.innerHTML = `<span>${counter}</span> Items In Your Bag`;
   h3.style.color = "rgb(254,176,74)";
   h3.style.paddingLeft = "8px";
   var sum = 0;
-  for (var i = 0; i < bagdata.length; i++) {
-    let v = +bagdata[i].price;
+  for (var i = 0; i < bagdata1.length; i++) {
+    let v = +bagdata1[i].price;
 
     sum = sum + v;
   }
